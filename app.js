@@ -15,7 +15,7 @@ var mongoose = require('mongoose');
 
 var app = express();
 
-//connect mongodb
+// connect mongodb
 if (process.env.DEV_ENV) {
     mongoose.connect("mongodb://localhost:27017/chirp-test");
 }
@@ -28,7 +28,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(session({
     secret: 'super duper secret'
@@ -40,7 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(passport.initialize());
 app.use(passport.session()); 
 
-//// Initialize Passport
+// Initialize Passport
 var initPassport = require('./passport-init');
 initPassport(passport);
 
