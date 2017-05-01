@@ -20,7 +20,6 @@ if (process.env.DEV_ENV) {
     mongoose.connect("mongodb://localhost:27017/chirp-test");
 }
 else {
-    //chirpapp, chirpapp2017
     mongoose.connect("mongodb://chirpapp:chirpapp2017@ds011389.mlab.com:11389/chirp-app");
 }
 
